@@ -1,7 +1,6 @@
 'use client';
 
-type Props = {
-};
+type Props = {};
 
 export default function QuoteAsk({}: Props) {
   async function handleClick() {
@@ -9,12 +8,10 @@ export default function QuoteAsk({}: Props) {
 
     // scroll to the bottom
     window.scrollTo(0, document.body.scrollHeight);
-   
   }
 
-
   return (
-    <button type="button" style={{marginLeft: '20px'}} onClick={handleClick}>
+    <button type="button" style={{ marginLeft: '20px' }} onClick={handleClick}>
       Get a Quote
     </button>
   );

@@ -1,38 +1,35 @@
 'use client';
 
-import { useRef } from "react";
+import { useRef } from 'react';
 
 type Props = {};
 
 export default function QuoteForm({}: Props) {
-
-  const firstNameRef = useRef({ value: '' })
-  const emailRef = useRef({ value: '' })
-  const companyRef = useRef({ value: '' })
-  const locationRef = useRef({ value: '' })
-  const spaceRef = useRef({ value: '' })
-  
+  const firstNameRef = useRef({ value: '' });
+  const emailRef = useRef({ value: '' });
+  const companyRef = useRef({ value: '' });
+  const locationRef = useRef({ value: '' });
+  const spaceRef = useRef({ value: '' });
 
   async function onSubmit() {
-   
-    const firstName = firstNameRef.current.value
-    const email = emailRef.current.value
-    const company = companyRef.current.value
-    const location = locationRef.current.value
-    const space = spaceRef.current.value
-    console.log(firstName, email, company, location, space)
-    
+    const firstName = firstNameRef.current.value;
+    const email = emailRef.current.value;
+    const company = companyRef.current.value;
+    const location = locationRef.current.value;
+    const space = spaceRef.current.value;
+    console.log(firstName, email, company, location, space);
+
     // scroll to the bottom
     // window.scrollTo(0, document.body.scrollHeight);
-  
   }
 
   return (
     <>
-      <div  className="border-b border-gray-900/10 pb-12 mt-12">
+      <div className="border-b border-gray-900/10 pb-12 mt-12">
         <h1 className="font-semibold text-gray-900">ask a Question</h1>
         <p className="mt-1 text-sm/6 text-gray-600">
-        Drop your details below and we'll get in touch (typically within 5 minutes) to answer any questions you have and/or to arrange a time for you to take a look around the space.
+          Drop your details below and we'll get in touch (typically within 5 minutes) to answer any
+          questions you have and/or to arrange a time for you to take a look around the space.
         </p>
 
         <div className="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
@@ -119,7 +116,9 @@ export default function QuoteForm({}: Props) {
           </div>
         </div>
 
-        <button type='button' className="" onClick={onSubmit}>submit</button>
+        <button type="button" className="" onClick={onSubmit}>
+          submit
+        </button>
       </div>
     </>
   );

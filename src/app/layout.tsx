@@ -50,7 +50,7 @@ export default function RootLayout({
             </a>
           </nav>
           <DraftModeToggler draftModeEnabled={draftMode().isEnabled} />
-          
+
           <QuoteAsk />
         </header>
         <main>{children}</main>
