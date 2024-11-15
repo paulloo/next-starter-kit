@@ -1,9 +1,11 @@
 import DraftModeToggler from '@/components/DraftModeToggler';
+import QuoteAsk from '@/components/QuoteAsk';
 import { TagFragment } from '@/lib/datocms/commonFragments';
 import { executeQuery } from '@/lib/datocms/executeQuery';
 import { graphql } from '@/lib/datocms/graphql';
 import { draftMode } from 'next/headers';
 import { toNextMetadata } from 'react-datocms';
+import QuoteForm from '@/components/QuoteForm';
 
 import './global.css';
 
@@ -48,8 +50,12 @@ export default function RootLayout({
             </a>
           </nav>
           <DraftModeToggler draftModeEnabled={draftMode().isEnabled} />
+          
+          <QuoteAsk />
         </header>
         <main>{children}</main>
+
+        <QuoteForm />
       </body>
     </html>
   );
