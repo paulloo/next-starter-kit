@@ -2,21 +2,19 @@
 
 import { useRef } from 'react';
 
-type Props = {};
-
-export default function QuoteForm({}: Props) {
-  const firstNameRef = useRef({ value: '' });
-  const emailRef = useRef({ value: '' });
-  const companyRef = useRef({ value: '' });
-  const locationRef = useRef({ value: '' });
-  const spaceRef = useRef({ value: '' });
+export default function QuoteForm() {
+  const firstNameRef = useRef<HTMLInputElement>(null);
+  const emailRef = useRef<HTMLInputElement>(null);
+  const companyRef = useRef<HTMLInputElement>(null);
+  const locationRef = useRef<HTMLSelectElement>(null);
+  const spaceRef = useRef<HTMLTextAreaElement>(null);
 
   async function onSubmit() {
-    const firstName = firstNameRef.current.value;
-    const email = emailRef.current.value;
-    const company = companyRef.current.value;
-    const location = locationRef.current.value;
-    const space = spaceRef.current.value;
+    const firstName = firstNameRef.current?.value;
+    const email = emailRef.current?.value;
+    const company = companyRef.current?.value;
+    const location = locationRef.current?.value;
+    const space = spaceRef.current?.value;
     console.log(firstName, email, company, location, space);
 
     // scroll to the bottom

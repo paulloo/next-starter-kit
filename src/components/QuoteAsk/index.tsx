@@ -1,8 +1,6 @@
 'use client';
 
-type Props = {};
-
-export default function QuoteAsk({}: Props) {
+export default function QuoteAsk() {
   async function handleClick() {
     let response: Response;
 
